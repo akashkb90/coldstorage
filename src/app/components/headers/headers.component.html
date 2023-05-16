@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" routerLink="/">Om Nama Shivaya</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+  
+        <!-- <li  *ngIf="isLoggedIn" class="nav-item" routerLinkActive="active"  [routerLinkActiveOptions]="{exact:true}">
+          <a class="nav-link" routerLink="/">Loan Details</a>
+        </li> -->
+  
+        <!-- <li  *ngIf="isLoggedIn" class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/daily-collection">Daily Collection</a>
+        </li>
+        <li  *ngIf="isLoggedIn" class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/monthly-chitti">Monthly Chitti</a>
+        </li>
+        <li  *ngIf="isLoggedIn" class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/loan">Loan</a>
+          </li> -->
+        <!-- <li  *ngIf="isLoggedIn" class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/persons">Person Details</a>
+        </li> -->
+  
+      </ul>
+  
+  
+      <ul class="navbar-nav ml-auto">
+        <li  *ngIf="!isLoggedIn" class="nav-item" routerLinkActive="active">
+          <a routerLink="/register" class="nav-link"> Register</a>
+        </li>
+        <li  *ngIf="!isLoggedIn" class="nav-item" routerLinkActive="active"><a routerLink="/login" class="nav-link"> login</a></li>
+      
+        <li *ngIf="isLoggedIn" class="nav-item" routerLinkActive="active">
+          <a  class="nav-link"> {{loggedInUser}}</a>
+        </li>
+       
+        <li  *ngIf="isLoggedIn" class="nav-item" routerLinkActive="active">
+          <a (click)="logout()" class="nav-link"> Logout</a>
+        </li>
+      
+      </ul>
+    </div>
+  </nav>
